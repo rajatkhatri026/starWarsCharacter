@@ -1,0 +1,38 @@
+.character-card {
+    position: relative;
+    width: fit-content;
+    height: 100%;
+    /* background-color: #fff; */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scale and shadow transition */
+    margin-top: 20px;
+}
+  
+.character-card:hover {
+    transform: scale(1.0); /* Increase the size of the card when hovered */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow to create the 'pop' effect */
+    cursor: pointer;
+}
+
+/* Optionally, add a background color change or other effects */
+.character-card img {
+    width: 150px;
+    height: 150px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    object-fit: cover; /* Ensure the image covers the area of the card */
+    transition: transform 0.3s ease; /* Smooth transition for the image as well */
+    border-radius: 10px;
+}
+
+.character-card h6 {
+    margin-top: 14px;
+    margin-left: 16px;
+    color: #fff;
+}
+
+.character-card:hover img {
+    transform: scale(1.1); /* Optionally scale the image for an extra pop effect */
+}

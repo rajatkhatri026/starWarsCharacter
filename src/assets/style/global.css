@@ -1,0 +1,126 @@
+/* Base styles */
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --button-bg-light: #000;
+  --button-text-light: #ffffff;
+  --button-modal-bg-light: #f1f1f1;
+
+  --background-color-dark: #1a1a1a;
+  --text-color-dark: #ffffff;
+  --button-bg-dark: #fff;
+  --button-text-dark: #000;
+  --button-modal-bg-dark: #383535;
+
+  /* Default theme is light */
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --button-bg: var(--button-bg-light);
+  --button-text: var(--button-text-light);
+  --button-modal-bg: var(var(--button-modal-bg-light));
+}
+
+/* Apply light theme */
+body.light-theme {
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --button-bg: var(--button-bg-light);
+  --button-text: var(--button-text-light);
+  --button-modal-bg: var(--button-modal-bg-light);
+}
+
+/* Apply dark theme */
+body.dark-theme {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --button-bg: var(--button-bg-dark);
+  --button-text: var(--button-text-dark);
+  --button-modal-bg: var(--button-modal-bg-dark);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.app {
+    font-family: Arial, sans-serif;
+  }
+
+  .main-body-content{
+    background-color: var(--background-color);
+  }
+  
+  .header {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+  }
+  
+  .main-content {
+    padding: 20px;
+    height: calc(100vh - 101px);
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+    justify-content: flex-start; /* Align cards to the left */
+    gap: 20px; /* Add space between cards */
+    margin-top: 20px; /* Optional: space above the container */
+  }
+
+  .search-filter-container {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-filter-container input,
+  .search-filter-container select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .header-button{
+    position: absolute;
+    right: 6px;
+    top: 8px;
+    background-color: var(--button-bg);
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+  }
+  
+  .theme-button{
+    right: 120px;
+  }
+
+  .no-data{
+    color: var(--text-color);
+    text-align: center;
+    width: 100%;
+  }
+  
+  

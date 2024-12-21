@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Luke Skywalker",
+    "height": "1.72",
+    "mass": "77",
+    "birth_year": "19BBY",
+    "films": ["A New Hope", "The Empire Strikes Back"],
+    "species": "Human",
+    "homeworld": "Tatooine"
+  },
+  {
+    "name": "Darth Vader",
+    "height": "2.02",
+    "mass": "136",
+    "birth_year": "41.9BBY",
+    "films": ["A New Hope", "The Empire Strikes Back"],
+    "species": "Human",
+    "homeworld": "Tatooine"
+  }
+]

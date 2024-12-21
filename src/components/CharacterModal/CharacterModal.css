@@ -1,0 +1,103 @@
+/* CharacterModal.css */
+@import '../../assets//style/global.css';
+
+.custom-modal {
+    background-color: #f0f0f0; /* Light gray background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+}
+
+.modal-content{
+    background-color: var(--background-color) !important;
+}
+
+.modal-title{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+/* Modal Header Styling */
+.custom-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+}
+
+.custom-modal-header .btn-close {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add hover effect */
+.custom-modal-header .btn-close:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+  
+.custom-modal-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+  
+.modal-character-image {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+  
+.character-info {
+    padding: 15px;
+    background-color: var(--button-modal-bg);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.homeland-text{
+  color: var(--text-color);
+}
+  
+/* Optional Add to Favorites Button Styling */
+button {
+    margin-left: 10px;
+}
+  
+/* Loading State */
+.loading-content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.loading-content p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+  
+/* Modal Footer Styling */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+  
+button {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.close-button{
+  border-radius: 10px;
+}
+
+  
