@@ -21,23 +21,21 @@ const Main: React.FC = () => {
   useTokenRefresh(); // Automatically refresh token when it is near expiration
 
   return (
-    <div>
-      <Routes>
-        {/* Public Routes */}
-        <Route path="/login" element={<LoginForm />} />
+    <Routes>
+      {/* Public Routes */}
+      <Route path="/login" element={<LoginForm />} />
 
-        {/* Protected Route (Requires authentication) */}
-        <Route
-          path="/star-wars-characters"
-          element={isAuthenticated ? <ProtectedRoutes /> : <Navigate to="/login" />}
-        >
-          <Route path="/star-wars-characters" element={<MainContent />} />
-        </Route>
+      {/* Protected Route (Requires authentication) */}
+      <Route
+        path="/star-wars-characters"
+        element={isAuthenticated ? <ProtectedRoutes /> : <Navigate to="/login" />}
+      >
+        <Route path="/star-wars-characters" element={<MainContent />} />
+      </Route>
 
-        {/* Default Route*/}
-        <Route path="/" element={<Navigate to={isAuthenticated ? "/star-wars-characters" : "/login"} />} />
-      </Routes>
-    </div>
+      {/* Default Route*/}
+      <Route path="/" element={<Navigate to={isAuthenticated ? "/star-wars-characters" : "/login"} />} />
+    </Routes>
   );
 };
 

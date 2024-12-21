@@ -1,15 +1,24 @@
-// LoginForm.tsx
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col, Card, CardBody, CardTitle, FormGroup, Label, Input } from 'reactstrap';
+import {
+  Button,
+  Container,
+  Card,
+  CardBody,
+  Input,
+  Row,
+  Col,
+  FormGroup,
+  Label,
+} from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext'; // Import login function
 
-const LoginForm: React.FC = () => {
+const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  const { login } = useAuth()
+  const { login } = useAuth();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,48 +30,56 @@ const LoginForm: React.FC = () => {
       setError('Invalid credentials, please try again.');
     }
   };
-
   return (
-    <Container className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-      <Row>
-        <Col xs={12}>
-          <Card>
-            <CardBody>
-              <CardTitle className="text-center">Login</CardTitle>
-              {error && <p className="text-danger text-center">{error}</p>}
-              <Form onSubmit={handleSubmit}>
-                <FormGroup controlid="formUsername" className="mb-3">
-                  <Label>Username</Label>
-                  <Input
-                    type="text"
-                    data-cy="username-input"
-                    placeholder="Enter username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                  />
-                </FormGroup>
+    <Container fluid className="container">
+      <Row className="g-0 align-items-center">
+        <Col md="6">
+          <Card className="my-5 cascading-right first-col" style={{ background: 'hsla(0, 0%, 100%, 0.55)', backdropFilter: 'blur(30px)' }}>
+            <CardBody className="p-5 shadow-5 text-center">
 
-                <FormGroup controlid="formPassword" className="mb-3">
-                  <Label>Password</Label>
-                  <Input
-                    type="password"
-                    data-cy="password-input"
-                    placeholder="Enter password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </FormGroup>
+              <h2 className="fw-bold mb-5">Sign in</h2>
 
-                <Button aria-label='login' data-cy="login-button" variant="primary" type="submit" className="w-100">
-                  Log In
-                </Button>
-              </Form>
+              <Row>
+                <Col md="12">
+                  <FormGroup className='fields'>
+                    <Label className='text-start'>Email</Label>
+                    <Input
+                      type="text"
+                      data-cy="username-input"
+                      placeholder="Enter username"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                    />
+                  </FormGroup>
+                </Col>
+
+                <Col md="12">
+                  <FormGroup className='fields'>
+                    <Label>Password</Label>
+                    <Input
+                      type="password"
+                      data-cy="password-input"
+                      placeholder="Enter password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                  </FormGroup>
+                </Col>
+              </Row>
+              <Button onClick={(e) => handleSubmit(e)} className="w-100 mb-4" size="md">Sign up</Button>
+              {error && <span className='text-danger'>{error}</span>}
             </CardBody>
           </Card>
         </Col>
+
+        <Col md="6">
+          <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" className="w-100 rounded-4 shadow-4" alt="" />
+        </Col>
+
       </Row>
+
     </Container>
   );
-};
+}
 
 export default LoginForm;
