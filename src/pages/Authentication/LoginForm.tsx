@@ -66,7 +66,7 @@ const LoginForm = () => {
                   </FormGroup>
                 </Col>
               </Row>
-              <Button onClick={(e) => handleSubmit(e)} className="w-100 mb-4" size="md">Sign up</Button>
+              <Button onClick={(e) => handleSubmit(e)} className="w-100 mb-4" size="md">Sign in</Button>
               {error && <span className='text-danger'>{error}</span>}
             </CardBody>
           </Card>
